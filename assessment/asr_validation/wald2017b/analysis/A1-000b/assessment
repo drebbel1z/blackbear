@@ -1,8 +1,33 @@
 [Tests]
-  [A1-000b]
+  [A1-000b1]
     type = 'CSVDiff'
     input = 'A1-000b.i'
     csvdiff = 'A1-000b_out.csv'
+    cli_args = "Materials/stress_wrapped/objective_rate='jaumann'"
+    rel_err = 1e-3
+    abs_zero = 1e-8
+    min_parallel = 4
+    max_time = 2000
+    heavy = true
+  []
+
+  [A1-000b2]
+    type = 'CSVDiff'
+    input = 'A1-000b.i'
+    csvdiff = 'A1-000b_out.csv'
+    cli_args = "Materials/stress_wrapped/objective_rate='green_naghdi'"
+    rel_err = 1e-3
+    abs_zero = 1e-8
+    min_parallel = 4
+    max_time = 2000
+    heavy = true
+  []
+
+  [A1-000b3]
+    type = 'CSVDiff'
+    input = 'A1-000b.i'
+    csvdiff = 'A1-000b_out.csv'
+    cli_args = "Materials/stress_wrapped/objective_rate='truesdell'"
     rel_err = 1e-3
     abs_zero = 1e-8
     min_parallel = 4
